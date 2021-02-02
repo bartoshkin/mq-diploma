@@ -1,12 +1,12 @@
 @font-face {
   font-family: Open Sans;
-  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+  src: url("../fonts/OpenSans-Regular.woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Open Sans;
-  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  src: url("../fonts/OpenSans-Bold.woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -26,89 +26,194 @@ li {
 }
 a {
   text-decoration: none;
-  color: #004004;
+  color: #904904;
+}
+img { 
+  max-width: 100%;
 }
 .header {
-  width: 100%;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-color: #000000;
-  position: relative;
+   width: 100%;
+   background-image: url("../images/banner-bg.jpg");
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   background-color: #000000;
+   position: relative;
 }
 .header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.5);
 }
 .container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  position: relative;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+   position: relative;
 }
 .header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 0;
 }
 .header-logo {
-  width: 185px;
+   display: block;
+   width: 185px;
+}
+.header-content > .header-logo {
+   display: none;
 }
 .header-logo img {
-  width: 100%;
+   width: 100%;
 }
 .header-menu-list {
-  display: flex;
+   display: flex;
 }
 .header-menu-link {
-  display: block;
-  text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 15px;
-  color: #ffffff;
-  font-size: 14px;
+   display: block;
+   text-transform: uppercase;
+   padding: 10px 15px 10px 20px;
+   color: #ffffff;
+   font-size: 14px;
 }
 .header-menu-list-item:last-child > .header-menu-link {
-  padding-right: 0;
+   padding-right: 0;
 }
 .header-menu-link:active {
-  color: rgba(255,255,255, 0.6);
+   color: rgba(255,255,255, 0.6);
 }
 .header-content {
-  padding-top: 60px;
-  padding-bottom: 100px;
-  text-align: center;
+   padding-top: 60px;
+   padding-bottom: 100px;
+   text-align: center;
+   max-width: 720px;
+   margin: 0 auto;
 }
 .header-title {
-  width: 650px;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-size: 40px;
-  line-height: 70px;
-  margin: 0 auto;
+   text-transform: uppercase;
+   color: #ffffff;
+   font-size: 45px;
+   margin: 0 auto;
+}
+.menu-burger {
+	display: none;
+   flex-direction: column;
+}
+.menu-burger-item {
+	width: 23px;
+	height: 3px;
+	background-color: #ffffff;
+	margin-bottom: 5px;
+}
+.trands-title {
+   font-weight: bold;
+   font-size: 20px;
+   text-transform: uppercase;
+   text-align: center;
+   padding-top: 49px;
+   padding-bottom: 17px;
+   margin-bottom: 27px;
+   position: relative;
+}
+.trands-title:after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   height: 3px;
+   width: 66px;
+   background: rgb(174, 159, 92);
+   margin-Left: -33px;
+}
+.cards {
+   width: 100%;
+   display: flex;
+}
+.card {
+   width: calc(25% - 4px);
+   height: 320px;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   background-color: #000000;
+   position: relative;
+   margin-right: 4px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding: 15px;
+}
+.card::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+.card:last-child {
+	 width: 25%;
+   margin-right: 0;
+}
+.card1 {
+   background-image: url("../images/trend1.jpg");
+}
+.card2 {
+   background-image: url("../images/trend2.jpg");
+}
+.card3 {
+   background-image: url("../images/trend3.jpg");
+}
+.card4 {
+   background-image: url("../images/trend4.jpg");
+}
+.card-content {
+   position: relative;
+   border: 3px solid #b59f5b;
+   padding: 35px;
+   display: flex;
+   flex-direction: column;
+}
+.card-tags {
+   display: flex;
+   flex-wrap: wrap;
+}
+.card-tag {
+   margin-right: 19px;
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 14px;
+}
+.card-tag-link {
+   color: rgb(174, 159, 92);
+}
+.card-title {
+   font-size: 20px;
+   margin: 0;
+}
+.card-title-link {
+   text-transform: uppercase;
+   color: #ffffff;
 }
 .layout {
   display: flex;
   margin-top: 60px;
 }
 .stories {
-  width: 778px;
+  max-width: 778px;
 }
 .stories-item {
   display: flex;
   margin-bottom: 60px;
 }
 .stories-item-picture > img {
-  width: 380px;
+  max-width: 380px;
 }
 .stories-item-content {
   margin-left: 30px;
@@ -154,7 +259,7 @@ a {
   margin-top: 20px;
 }
 .aside {
-  width: 272px;
+  max-width: 272px;
   margin-left: 120px;
 }
 .aside-item {
@@ -280,7 +385,8 @@ a {
   margin-left: 4px;
   color: rgb(174, 159, 92);
 }
-.social {
+
+/*.social {
   background-color: #f4f7f6;
 }
 .social-networks-list {
@@ -331,4 +437,122 @@ a {
   font-size: 12px;
   font-family: Open Sans, Arial, sans-serif;
   font-weight: 700;
+}*/
+
+@media (max-width: 1024px) {
+	.header {
+  	 background-image: url("https://raw.githubusercontent.com/bartoshkin/mq-diploma/main/images/banner-bg-tablet.jpg");
+	}
+	.header-logo {
+	 width: 164px;
+	}
+	.header-menu {
+	 display: none;
+	}
+	.menu-burger {
+	 display: flex;
+	}
+  .header-content {
+    max-width: 700px;
+  }
+	.header-title {
+	 font-size: 35px;
+	}
+  .trands-title {
+    font-size: 18px;
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: calc(50% - 4px);
+    height: 249px;
+    margin-bottom: 3px;
+  }
+  .card:nth-child(even) {
+  	 width: 50%;
+     margin-right: 0;
+  }
+  .card-content {
+  	 padding: 30px;
+  }
+  .card-title {
+  	 font-size: 17px;
+  }
+  .layout {
+    padding: 0 35px;
+    justify-content: space-between;
+  }
+  .stories {
+    max-width: 380px;
+  }
+  .stories-item {
+  	 display: block;
+  	 padding-bottom: 15px;
+    margin-bottom: 45px;
+  	 border-bottom: solid 4px #eeeeee;
+  }
+  .stories-item:last-child {
+  	border-bottom: none;
+  }
+  .stories-item-content {
+  	margin-left: 0;
+  }
+  .aside {
+  	margin-left: 35px;
+  }
+}
+@media (max-width: 420px) {
+	.header {
+		background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-mobile.jpg");
+	}
+  .header-top {
+    justify-content: flex-end;
+  }
+	.header-logo {
+	  display: none;
+  }
+  .header-content > .header-logo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px 24px 5px;
+  }
+	.menu-burger {
+		display: flex;
+    justify-content: end;
+	}
+  .header-content {
+    padding-top: 246px;
+    padding-bottom: 238px;
+    max-width: 285px;
+  }
+	.header-title {
+		font-size: 26px;
+	}
+  .trands-title {
+    font-size: 16px;
+  }
+  .card {
+    width: 100%;
+    height: 233px;
+    margin-right: 0;
+  }
+  .card:nth-child(even) {
+  	 width: 100%;
+  }
+  .card:last-child {
+  	margin-bottom: 0;
+  	width: 100%;
+  }
+  .card-content {
+  	 padding: 20px;
+  }
+  .card-title {
+  	 font-size: 16px;
+  }
+  .layout {
+    display: block;
+    padding: 0 15px;
+  }
 }
