@@ -259,6 +259,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .stories-item-post-date {
   color: #aaa;
+  display: inline-block;
 }
 .stories-item-author {
   font-weight: bold;
@@ -552,7 +553,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
-  /*display: none;*/
+  display: none;
 }
 .popup-body {
   min-height: 100%;
